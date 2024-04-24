@@ -1,0 +1,8 @@
+<div class="content_container">
+  <h1 class="main_header">USERS !</h1>
+  <ul class="list_container">
+    <%= for user <- @users do %>
+        <li class="list_item"><%= user.name %></li>
+        <% end %>
+  </ul>
+</div>
