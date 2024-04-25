@@ -5,7 +5,7 @@ defmodule ForumWeb.PostJSON do
   Renders a list of posts.
   """
   def index(%{posts: posts}) do
-    %{data: for(post <- posts, do: data(post))}
+    %{posts: for(post <- posts, do: data(post))}
   end
 
   @doc """
@@ -19,7 +19,8 @@ defmodule ForumWeb.PostJSON do
     %{
       id: post.id,
       body: post.body,
-      title: post.title
+      title: post.title,
+      user_id: post.user_id
     }
   end
 end
